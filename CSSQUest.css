@@ -1,0 +1,287 @@
+body {
+  overflow-x: hidden;
+  font-family: Poppins, "san-serif";
+  background: #26cfc2; /* Cor de fundo do body */
+}
+
+/* Centralizar e corrigir cor do título */
+h1 {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 40px
+}
+
+/* Centralizar completamente o link "Official Guide" */
+.text-center {
+  text-align: center; /* Garante que o conteúdo dentro fique centralizado */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto; /* Ajustável conforme necessário */
+}
+
+.text-center a {
+  color: white !important;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.text-center a:hover {
+  text-decoration: underline;
+}
+
+
+fieldset {
+  box-shadow: hsla(0, 0%, 0%, 0.14) 0px 20px 40px 0px;
+  background: white;
+  border: 0 none;
+  border-radius: 0px;
+  padding: 20px 30px;
+  box-sizing: border-box;
+  width: 80%;
+  margin: 0 10%;
+  position: relative;
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+/* Botões principais */
+.My-Button-see-live {
+  background-color: #26cfc2 !important;
+  color: white !important;
+  border: #26cfc2 solid 0.5px !important;
+  border-radius: 0px !important;
+  border: none !important;
+  font-weight: 500;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.My-Button-see-live-2 {
+  background-color: white !important;
+  color: #26cfc2 !important;
+  border: #26cfc2 solid 0.5px !important;
+  font-weight: 500 !important;
+  border-radius: 0px !important;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.My-Button-see-live:hover,
+.My-Button-see-live:active {
+  background-color: #20bdb0 !important;
+  color: white !important;
+  border: #26cfc2 solid 0.5px !important;
+}
+
+.My-Button-see-live-2:hover,
+.My-Button-see-live-2:active {
+  background-color: #20bdb0 !important;
+  color: white !important;
+  border: #26cfc2 solid 0.5px !important;
+}
+
+/* Estilos do formulário */
+#msform {
+  position: relative;
+  margin-top: 30px;
+}
+
+#msform fieldset:not(:first-of-type) {
+  display: none;
+}
+
+/* Inputs e textareas */
+#msform .inputing,
+#msform textarea {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: Poppins, "san-serif";
+  color: #2c3e50;
+  font-size: 13px;
+  transition: border-color 0.3s ease;
+}
+
+#msform .inputing:focus,
+#msform textarea:focus {
+  border: 1px solid #26cfc2;
+  outline: none;
+}
+
+/* Títulos e subtítulos */
+.fs-title {
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.fs-subtitle {
+  font-weight: normal;
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Listas de rádio e checkbox */
+.radio-list-left,
+.checkbox-list-left {
+  margin-bottom: 20px;
+}
+
+.radio-list-left dd,
+.checkbox-list-left dd {
+  margin-bottom: 10px;
+}
+
+.radio-list-left input[type="radio"],
+.checkbox-list-left input[type="checkbox"] {
+  opacity: 0;
+  position: absolute;
+}
+
+.radio-list-left input[type="radio"] + label,
+.checkbox-list-left input[type="checkbox"] + label {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  display: inline-block;
+  color: #222;
+}
+
+.radio-list-left input[type="radio"] + label:before,
+.checkbox-list-left input[type="checkbox"] + label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border: 1px solid #26cfc2;
+  background: white;
+  border-radius: 50%;
+}
+
+.checkbox-list-left input[type="checkbox"] + label:before {
+  border-radius: 0%;
+}
+
+.radio-list-left input[type="radio"]:checked + label:before,
+.checkbox-list-left input[type="checkbox"]:checked + label:before {
+  background: #26cfc2;
+  border-color: #26cfc2;
+}
+
+.radio-list-left input[type="radio"]:checked + label:after,
+.checkbox-list-left input[type="checkbox"]:checked + label:after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+}
+
+.checkbox-list-left input[type="checkbox"]:checked + label:after {
+  background: transparent;
+  border: 2px solid white;
+  width: 6px;
+  height: 10px;
+  border-radius: 0;
+  transform: translateY(-60%) rotate(45deg);
+  left: 7px;
+}
+
+/* Progressbar (opcional, se necessário) */
+#progressbar {
+  margin-bottom: 30px;
+  overflow: hidden;
+  counter-reset: step;
+}
+
+#progressbar li {
+  list-style-type: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 9px;
+  width: 33.33%;
+  float: left;
+  position: relative;
+  letter-spacing: 1px;
+}
+
+#progressbar li:before {
+  content: counter(step);
+  counter-increment: step;
+  width: 24px;
+  height: 24px;
+  line-height: 26px;
+  display: block;
+  font-size: 12px;
+  color: #333;
+  background: white;
+  border-radius: 25px;
+  margin: 0 auto 10px auto;
+}
+
+#progressbar li:after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: white;
+  position: absolute;
+  left: -50%;
+  top: 9px;
+  z-index: -1;
+}
+
+#progressbar li:first-child:after {
+  content: none;
+}
+
+#progressbar li.active:before,
+#progressbar li.active:after {
+  background: #26cfc2;
+  color: white;
+}
+
+/* Links e outros elementos */
+.dme_link {
+  margin-top: 30px;
+}
+
+.dme_link a {
+  background: #fff;
+  font-weight: bold;
+  color: #26cfc2;
+  border: 0 none;
+  border-radius: 25px;
+  cursor: pointer;
+  padding: 5px 25px;
+  font-size: 12px;
+}
+
+.dme_link a:hover,
+.dme_link a:focus {
+  background: #20bdb0;
+  color: white;
+  text-decoration: none;
+}

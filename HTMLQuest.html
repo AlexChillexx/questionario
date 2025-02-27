@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionário</title>
+
+    <!-- Vincular CSS -->
+    <link rel="stylesheet" href="CSSQuest.css">
+
+    <!-- Importação da Fonte Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap e jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="text-center pt-1">
+  <a class="text-white" href="https://codepen.io/designify-me/pen/qrJWpG">Official Guide</a>
+</div>
+
+<div class="container-fluid-md mt-2">
+  <h1 class="text-white font-weight-bold text-center">Química antiga, Conhecimento moderno.</h1>
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-10 col-lg-8">
+      <form id="msform">
+        <fieldset class="rounded">
+          <h2 class="fs-title">Conhecimento do tema</h2>
+          <h3 class="fs-subtitle">1. Já teve algum contato com textos históricos de química ou medicina?</h3>
+          <div class="radio-list-left">
+            <dd>
+              <input type="radio" name="contato_textos" id="contato_textos_sim" value="Sim">
+              <label for="contato_textos_sim">Sim</label>
+            </dd>
+            <dd>
+              <input type="radio" name="contato_textos" id="contato_textos_nao" value="Não">
+              <label for="contato_textos_nao">Não</label>
+            </dd>
+          </div>
+          <button type="button" name="next" class="next rounded btn btn-md My-Button-see-live px-5 p-2">Next</button>
+        </fieldset>
+
+        <fieldset class="rounded">
+          <h2 class="fs-title">Interesse e necessidade</h2>
+          <h3 class="fs-subtitle">1. Quais tópicos acha mais interessante para explorar dentro do tema?</h3>
+          <textarea class="inputing" name="topicos_interesse" placeholder="Descreva os tópicos de interesse"></textarea>
+          <button type="button" name="previous" class="previous rounded btn btn-md My-Button-see-live-2 px-4 p-2">Previous</button>
+          <button type="button" name="next" class="next rounded btn btn-md My-Button-see-live px-5 p-2">Next</button>
+        </fieldset>
+        
+        <fieldset class="rounded">
+          <h2 class="fs-title">Feedback geral</h2>
+          <h3 class="fs-subtitle">1. O que gostaria de ver que não foi mencionado?</h3>
+          <textarea class="inputing" name="feedback_nao_mencionado" placeholder="Descreva o que gostaria de ver"></textarea>
+          <button type="button" name="previous" class="previous rounded btn btn-md My-Button-see-live-2 px-4 p-2">Previous</button>
+          <button type="submit" class="rounded btn btn-md My-Button-see-live px-5 p-2">Submit</button>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Script para carregar JSON externo -->
+<script>
+    fetch('JSONQuest.js')
+    .then(response => response.json())
+    .then(data => {
+        console.log("Dados carregados:", data);
+    })
+    .catch(error => console.error("Erro ao carregar JSON:", error));
+</script>
+
+<!-- Vincular JavaScript -->
+<script src="JSONQuest.js"></script>
+</body>
+</html>
